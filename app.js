@@ -15,7 +15,7 @@ function Getfname(camid) {
       console.log(typeof files);
       if ((typeof files != "undefined") && (files.length > 0)) { fulname = imgFolder + camid + '/' + files[files.length - 1]; }
       else { fulname = imgFolder + '/nopic.jpg'; }
-
+  console.log("I am " + fulname);
       resolve({ camid: camid, fname: fulname });
     });
   });
