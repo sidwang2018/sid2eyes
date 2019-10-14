@@ -1,0 +1,24 @@
+{
+  "name": "sid2bigeye",
+  "version": "1.0.0",
+  "description": "![Build Status][ci-badge]",
+  "main": "app.js",
+  "dependencies": {
+    "@google-cloud/debug-agent": "^4.0.4",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidwang2018/sid2bigeye.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sidwang2018/sid2bigeye/issues"
+  },
+  "homepage": "https://github.com/sidwang2018/sid2bigeye#readme"
+}
