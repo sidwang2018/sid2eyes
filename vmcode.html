@@ -3,24 +3,15 @@ https://cloud.google.com/compute/docs/quickstart-linux?hl=zh-tw
 
 
 gcloud compute --project  "sid2eyes" ssh --zone  asia-east1-b apvm
-gcloud compute --project  "sid2eyes" ssh --zone  asia-east1-b dbvm
-
-
-sudo nohup nodejs server.js   --be_ip 10.140.0.4  --fe_ip 10.140.0.3 &
-
-https://cloud.google.com/nodejs/getting-started/hello-world 
 
 
 sudo apt-get update
-suod apt-install npm
-npm install
 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-curl -sL https://deb.nodesource.com/setup_6.x  | sudo -E bash -
+sudo apt-get install -y nodejs
 
-sudo apt-get install git nodejs
-
-sudo apt install npm
+apt-get install -y build-essential
 
 
 git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples
