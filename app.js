@@ -1,4 +1,3 @@
-require('@google-cloud/debug-agent').start();
 const express = require('express')
   , fs = require('fs');
 const imgFolder = './ftpdata/';
