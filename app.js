@@ -54,11 +54,11 @@ app.listen(PORT, () => {
 
 
 const FtpSvr = require('ftp-srv');
-const hostname = 'myeye.iwork.net.tw';
+const hostname = '0.0.0.0';
 const port = 21;
 var sdir = 'mypath';
 const ftpServer = new FtpSvr('ftp://' + hostname + ':' + port,
-  { anonymous: false, greeting: ["您好", "歡迎"] });
+  { anonymous: false, greeting: ["您好", "歡迎"], pasv_min:3000,pasv_max:4000,pasv_url:"0.0.0.0" });
 
 ftpServer.on('login', ({ connection, username, password }, resolve, reject) => {
   console.log('username: ' + username);
