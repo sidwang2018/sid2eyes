@@ -55,7 +55,7 @@ app.listen(PORT, () => {
 
 
 const FtpSvr = require('ftp-srv');
-const hostname = 'bigeye2020.appspot.com';
+const hostname = 'myeye.iwork.net.tw';
 const port = 21;
 var sdir = 'mypath';
 const ftpServer = new FtpSvr('ftp://' + hostname + ':' + port,
