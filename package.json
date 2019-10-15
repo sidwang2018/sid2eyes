@@ -4,7 +4,8 @@
   "description": "![Build Status][ci-badge]",
   "main": "app.js",
   "dependencies": {
-    "@google-cloud/debug-agent": "^4.0.4",
+    "express": "^4.17.1",
+    "ftp-srv": "^4.2.0",
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {},
