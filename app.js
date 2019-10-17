@@ -53,12 +53,14 @@ const FtpSvr = require('ftp-srv');
 const hostname = '0.0.0.0';
 const port = 21;
 var sdir = 'mypath';
-const ftpServer = new FtpSvr('ftp://' + hostname + ':' + port,
-  { anonymous: false, greeting: ["您好", "歡迎"], pasv_min:3000,pasv_max:4000,pasv_url:"0.0.0.0" });
-ftpServer.pasv_url = "0.0.0.0";
+
+
+const ftpServer = new FtpSvr({url:'ftp://' + hostname + ':' + port,
+   anonymous: false, greeting: ["您好", "歡迎"], pasv_min:3000,pasv_max:4000,pasv_url:"0.0.0.0" });
+/* ftpServer.pasv_url = "0.0.0.0";
 ftpServer.pasv_min = 3000;
 ftpServer.pasv_url = 4000;
-
+ */
 console.log(ftpServer.pasv_min);
 
 ftpServer.on('login', ({ connection, username, password }, resolve, reject) => {
