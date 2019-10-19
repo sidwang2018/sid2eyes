@@ -3,7 +3,7 @@ const express = require('express')
 const imgFolder = '/var/ftpdata/';
 const app = express();
 var favicon = require('serve-favicon');
-app.use(favicon('/var/ftpdata/favicon.ico'))
+app.use(favicon('./favicon.ico'))
 
 function Getfname(camid) {
   return new Promise((resolve, reject) => {
