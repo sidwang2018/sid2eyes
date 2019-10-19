@@ -9,7 +9,7 @@ function Getfname(camid) {
   return new Promise((resolve, reject) => {
     var fulname;
     fs.readdir(imgFolder + camid + '/', (err, files) => {
-      if ((typeof files != "undefined") && (files.length > 0)) { fulname = imgFolder + camid + '/' + files[files.length - 1]; }
+      if ((typeof files != "undefined") && (files.length > 0)) { fulname = imgFolder + camid + '/' + files[files.length - 2]; }
       else { fulname = imgFolder + '/nopic.jpg'; }
       console.log("I am " + fulname);
       resolve({ camid: camid, fname: fulname });
