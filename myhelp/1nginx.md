@@ -25,7 +25,7 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "upgrade";
         proxy_max_temp_file_size 0;
-        proxy_pass http://hakase-app/;
+        proxy_pass http://sid2eyes/;
         proxy_redirect off;
         proxy_read_timeout 240s;
     }
@@ -41,5 +41,5 @@ node 应用使用域名 myeye.iwork.net.tw 运行。
 nginx -t
 启用 Nginx 并使其开机自启动。
 
-systemctl start nginx
-systemctl enable nginx
+sudo systemctl restart nginx
+sudo systemctl enable nginx

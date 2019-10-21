@@ -1,6 +1,6 @@
 const express = require('express')
   , fs = require('fs');
-const imgFolder = '/var/ftpdata/';
+const imgFolder = '/bigeyeftp/';
 const app = express();
 var favicon = require('serve-favicon');
 app.use(favicon('./favicon.ico'))
@@ -8,9 +8,14 @@ app.use(favicon('./favicon.ico'))
 function Getfname(camid) {
   return new Promise((resolve, reject) => {
     var fulname;
+    var idx;
     fs.readdir(imgFolder + camid + '/', (err, files) => {
-      if ((typeof files != "undefined") && (files.length > 0)) { fulname = imgFolder + camid + '/' + files[files.length - 2]; }
-      else { fulname = imgFolder + '/nopic.jpg'; }
+
+      if ((typeof files != "undefined") && (files.length > 0)) { 
+        idx = Math.max(files.length - 2,0);
+        console.log(idx);
+        fulname = imgFolder + camid + '/' + files[idx]; }
+      else { fulname =  './nopic.jpg'; }
       console.log("I am " + fulname);
       resolve({ camid: camid, fname: fulname });
     });

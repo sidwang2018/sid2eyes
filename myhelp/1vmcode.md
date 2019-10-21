@@ -12,10 +12,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 
-apt-get install -y build-essential
-
-
-git clone https://github.com/GoogleCloudPlatform/nodejs-docs-samples
+sudo apt-get install -y build-essential
 
 git clone https://github.com/sidwang2018/sid2eyes.git
 
@@ -39,9 +36,5 @@ df -h
 //check folder size 
 du -hs /path/to/directory
 
-
-
-
-
-
-
+#list user
+awk -F: '{ print $1}' /etc/passwd
