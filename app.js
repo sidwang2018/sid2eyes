@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
      res.write('Hello World please enter cameraid');
     res.end(); });
 // Start the server
-const PORT = process.env.PORT || 80;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(process.env.PORT);
   console.log(`App listening on port ${PORT}`);

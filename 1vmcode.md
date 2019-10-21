@@ -25,9 +25,6 @@ sudo rm -r sid2eyes
 git clone https://github.com/sidwang2018/sid2eyes.git
 
 
-35.229.150.50
-
-
 cd sid2eyes
 //安裝node module
 
@@ -37,6 +34,10 @@ sudo npm install
 sudo node app.js
 
 
+//check disk udage of ubuntu 
+df -h
+//check folder size 
+du -hs /path/to/directory
 
 
 
